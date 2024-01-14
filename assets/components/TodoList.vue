@@ -162,10 +162,11 @@
                 if (todo.title.trim() == '') {
                     todo.title = this.beforeEditCache
                 }
-                if (todo.id > this.idForTodo) {
-                    this.idForTodo = todo.id
-                }
-
+                // if (todo.id > this.idForTodo) {
+                    
+                // }
+                // // console.log(todo.id, this.idForTodo)
+                this.idForTodo = todo.id
                 this.completedTodo = todo.completed = event.target.checked
 
                 const newTodo = {

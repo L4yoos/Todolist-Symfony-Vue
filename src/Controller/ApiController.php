@@ -95,10 +95,6 @@ class ApiController extends AbstractController
     {
         $entityManager = $doctrine->getManager();
         $todolist = $entityManager->getRepository(Todolist::class)->find($id);
-   
-        if ('application/json' !== $contentType) {
-            return $this->json('Invalid Content-Type. Expected application/json.', 400);
-        }
 
         if (!$todolist) {
             return $this->json('No project found for id' . $id, 404);
